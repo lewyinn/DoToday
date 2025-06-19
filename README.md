@@ -3,7 +3,7 @@
 
 <div align="center">
 
-![📝 DoToday]()
+![📝 DoToday](https://github.com/user-attachments/assets/edb1839a-ed0a-482e-a5c0-87991dfc0373)
 
 **A modern, secure, and responsive web voting platform built with Next.js & Tailwind CSS**
 
@@ -78,8 +78,8 @@ TO-DO-APP/
 ### 1. Clone the project
 
 ```bash
-git clone https://github.com/your-username/todo-app.git
-cd todo-app
+git clone https://github.com/lewyinn/DoToday.git
+cd DoToday
 ```
 
 ### 2. Install dependencies
