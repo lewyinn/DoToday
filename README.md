@@ -1,36 +1,166 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# 📝 DoToday
 
-First, run the development server:
+<div align="center">
+
+![📝 DoToday]()
+
+**A modern, secure, and responsive web voting platform built with Next.js & Tailwind CSS**
+
+[![Next.js](https://img.shields.io/badge/Next.js-15-black?style=flat-square&logo=next.js)](https://nextjs.org/)
+[![TailwindCSS](https://img.shields.io/badge/Tailwind-4.1-06B6D4?style=flat-square&logo=tailwindcss)](https://tailwindcss.com/)
+[![MIT License](https://img.shields.io/badge/License-MIT-green?style=flat-square)](LICENSE)
+
+[🚀 Demo](#) • [📚 Documentation](#) • [🐛 Report Bug](#) • [💡 Request Feature](#)
+
+</div>
+
+---
+
+## 📁 Folder Structure
+
+```
+TO-DO-APP/
+├── public/                  # Static files (images, icons, etc.)
+├── src/
+│   ├── app/
+│   │   ├── api/             # API routes (RESTful)
+│   │   │   ├── auth/        # Login & register
+│   │   │   │   ├── login/route.js
+│   │   │   │   └── register/route.js
+│   │   │   └── todos/       # To-Do CRUD API
+│   │   │       ├── [id]/route.js
+│   │   │       └── route.js
+│   │   ├── daftar/page.js   # Register page (UI)
+│   │   └── to-do/           # Main to-do interface
+│   │       ├── layout.js
+│   │       └── page.js
+│   ├── components/          # Reusable UI components
+│   │   └── modal.js
+│   └── lib/                 # Data logic and middleware
+│       ├── data.js          # CRUD functions & file ops
+│       ├── data.json        # JSON-based database
+│       └── middleware.js    # Auth middleware or utils
+├── styles/ (optional)       # Tailwind or global styles (globals.css)
+├── .gitignore
+├── package.json
+├── README.md
+└── vercel.json              # Vercel deployment config
+```
+
+---
+
+## 🚀 Features
+
+- ✅ Login & Register (with bcrypt password hashing)
+- ✅ Add, update, delete, and list to-dos
+- ✅ Simple file-based data store (`data.json`)
+- ✅ Modular and clean architecture
+- ✅ Built with `app/` directory in Next.js
+- ✅ Responsive UI with Tailwind CSS
+- ✅ No need for external databases or backend servers
+- ✅ Ready to deploy on **Vercel**
+
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend**: Next.js (App Router), Tailwind CSS
+- **Backend**: Node.js + Next.js API Routes
+- **Storage**: Local JSON file (`src/lib/data.json`)
+- **Security**: Password hashing with `bcrypt`
+- **Deployment**: [Vercel](https://vercel.com/)
+
+---
+
+## ⚙️ Getting Started
+
+### 1. Clone the project
+
+```bash
+git clone https://github.com/your-username/todo-app.git
+cd todo-app
+```
+
+### 2. Install dependencies
+
+```bash
+npm install
+```
+
+### 3. Run the app locally
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Visit `http://localhost:3000` to see the app running.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🧪 API Routes Overview
 
-## Learn More
+| Route | Method | Description |
+|-------|--------|-------------|
+| `/api/auth/login` | `POST` | Login user |
+| `/api/auth/register` | `POST` | Register user |
+| `/api/todos` | `GET` | Get all to-dos |
+| `/api/todos` | `POST` | Add new to-do |
+| `/api/todos/:id` | `PUT` | Update to-do by ID |
+| `/api/todos/:id` | `DELETE` | Delete to-do by ID |
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🔐 User Authentication
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Passwords are **hashed with `bcrypt`** and compared securely during login. All user data is stored in `src/lib/data.json`.
 
-## Deploy on Vercel
+Example user structure:
+```json
+{
+  "id": 1,
+  "name": "Contoh",
+  "email": "contoh@example.com",
+  "password": "$2b$10$..."
+}
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🧾 JSON Database
+
+Located at: `src/lib/data.json`
+
+```json
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Contoh",
+      "email": "contoh@example.com",
+      "password": "$2b$10$..."
+    }
+  ],
+  "todos": []
+}
+```
+
+---
+
+## 🙌 Credits
+
+Built with ❤️ using Next.js & Tailwind.
+
+---
+
+## 📜 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+<div align="center">
+
+**Made with ❤️ by [Moch Ridho Kurniawan](https://github.com/lewyinn)**
+
+</div>
